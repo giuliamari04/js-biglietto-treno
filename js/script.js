@@ -17,7 +17,7 @@ let prezzoPercorso = prezzoBiglietto * percorso;
 let outputDiv = document.getElementById("output");
 
 
-if(etaPasseggero< 0 || percorso< 0){
+if(etaPasseggero< 0 || percorso< 0 || isNaN(etaPasseggero)|| isNaN(percorso )){
     alert('errore dati');
 }else{
 if(etaPasseggero<=18){
