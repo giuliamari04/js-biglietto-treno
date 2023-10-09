@@ -17,7 +17,9 @@ let prezzoPercorso = prezzoBiglietto * percorso;
 let outputDiv = document.getElementById("output");
 
 
-
+if(etaPasseggero< 0 || percorso< 0){
+    alert('errore dati');
+}else{
 if(etaPasseggero<=18){
     prezzoPercorso = prezzoPercorso - (prezzoPercorso*20/100); 
 }else if(etaPasseggero>=65){
@@ -35,3 +37,4 @@ let risultato =
 `
   console.log('Prezzo per utente:', risultato);
   outputDiv.textContent = risultato;
+}
