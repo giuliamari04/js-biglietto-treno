@@ -15,6 +15,7 @@ let prezzoBiglietto = 0.21;
 let prezzoPercorso = prezzoBiglietto * percorso;
 
 
+
 if(etaPasseggero<=18){
     prezzoPercorso = prezzoPercorso - (prezzoPercorso*20/100); 
 }else if(etaPasseggero>=65){
@@ -23,6 +24,7 @@ if(etaPasseggero<=18){
 
 let prezzoFormattato = prezzoPercorso.toLocaleString('it-IT', {
     minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
   });
 
 let risultato =
