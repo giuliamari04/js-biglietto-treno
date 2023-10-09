@@ -14,6 +14,8 @@ console.log('perorso:',percorso,'ed età:',etaPasseggero);
 let prezzoBiglietto = 0.21;
 let prezzoPercorso = prezzoBiglietto * percorso;
 
+let outputDiv = document.getElementById("output");
+
 
 
 if(etaPasseggero<=18){
@@ -29,6 +31,7 @@ let prezzoFormattato = prezzoPercorso.toLocaleString('it-IT', {
 
 let risultato =
 `
-  il tuo percorso costerà ${prezzoFormattato} €.
+  il tuo biglietto costerà ${prezzoFormattato} €.
 `
   console.log('Prezzo per utente:', risultato);
+  outputDiv.textContent = risultato;
