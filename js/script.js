@@ -14,8 +14,6 @@ console.log('perorso:',percorso,'ed età:',etaPasseggero);
 let prezzoBiglietto = 0.21;
 let prezzoPercorso = prezzoBiglietto * percorso;
 
-let outputDiv = document.getElementById("output");
-
 if(etaPasseggero< 0 || percorso< 0 || isNaN(etaPasseggero)|| isNaN(percorso )){
     alert('errore dati');
     location.reload();
@@ -31,10 +29,12 @@ let prezzoFormattato = prezzoPercorso.toLocaleString('it-IT', {
     maximumFractionDigits: 2,
   });
 
-let risultato =
+let risultato = document.getElementById('output');
+risultato.innerHTML =
 `
-  il tuo biglietto costerà ${prezzoFormattato} €.
+<h2>
+  il tuo biglietto costerà <em> ${prezzoFormattato} € </em>.
+</h2>
 `
   console.log('Prezzo per utente:', risultato);
-  outputDiv.textContent = risultato;
 }
