@@ -16,9 +16,9 @@ let prezzoPercorso = prezzoBiglietto * percorso;
 
 let outputDiv = document.getElementById("output");
 
-
 if(etaPasseggero< 0 || percorso< 0 || isNaN(etaPasseggero)|| isNaN(percorso )){
     alert('errore dati');
+    location.reload();
 }else{
 if(etaPasseggero<=18){
     prezzoPercorso = prezzoPercorso - (prezzoPercorso*20/100); 
